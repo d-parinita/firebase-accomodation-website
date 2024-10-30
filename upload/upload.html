@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload PG</title>
+    <link rel="stylesheet" href="upload.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Payinguest</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../bookings/booking.html">Bookings</a></li>
+            <li><a href="">Upload PG</a></li>
+            <li id="login-btn"><a href="../login/login.html">Log In</a></li>
+            <li id="signup-btn"><a href="../signup/signup.html">Sign Up</a></li>
+            <!-- <li id="name-display" class="hidden">Name</li> -->
+            <li id="logout-btn" class="hidden"><a href="">Log Out</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <div class="upload-container">
+        <h2>Upload Your PG</h2>
+        <form id="upload-form">
+            <div class="form-group">
+                <label for="pg-name">PG Name</label>
+                <input type="text" id="pg-name" name="pg-name" required>
+            </div>
+            <div class="form-group">
+                <label for="pg-description">PG Description</label>
+                <textarea id="pg-description" name="pg-description" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="pg-price">PG Price (per month)</label>
+                <input type="number" id="pg-price" name="pg-price" required>
+            </div>
+            <div class="form-group">
+                <label for="pg-location">PG Location</label>
+                <input type="text" id="pg-location" name="pg-location" required>
+            </div>
+            <div class="form-group">
+                <label for="contact-info">Contact Information</label>
+                <input type="tel" id="contact-info" name="contact-info" placeholder="Contact" required>
+            </div>
+            <div class="form-group">
+                <label for="pg-image">Upload PG Image</label>
+                <input type="file" id="pg-image" name="pg-image" accept="image/*" required>
+            </div>
+            <button type="submit" id="submit-btn">Submit</button>
+        </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
+    <script src="../config.js"></script>
+    <script src="../main.js"></script>
+    <script src="upload.js"></script>
+</body>
+</html>

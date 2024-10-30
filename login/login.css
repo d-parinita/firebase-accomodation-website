@@ -1,0 +1,129 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    padding: 0 20px;
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Login Form Title */
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input Field Styling */
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    color: #333;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    color: #aaa;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+/* On Focus Animation for Labels */
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+    color: #27ae60;
+    font-size: 0.85rem;
+}
+
+.input-box:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #27ae60;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.input-box input:focus:before,
+.input-box input:valid:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #219150;
+}
+
+/* Sign Up Link */
+.signup-link {
+    margin-top: 20px;
+    color: #555;
+}
+
+.signup-link a {
+    color: #27ae60;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
